@@ -4,7 +4,7 @@ const app = express()
 const bodyParser = require("body-parser")
 const cors = require("cors")
 const jwt = require("jsonwebtoken")
-const expressJWT = require("express-jwt")
+const { expressjwt: expressJWT } = require("express-jwt")
 
 // 解析json
 app.use(express.json())
