@@ -20,7 +20,7 @@ app.use(cors())
 // jsonwebtoken
 
 // secretkey
-const secretkey = "我是任意加密字符串"
+const secretkey = process.env.JWT_SECRET_KEY || "我是任意加密字符串"
 //expressJWT把JWT三段字符串幾希還原成json對象
 // 配置成功expressJWT後可以把用戶信息掛載到req.user
 app.use(expressJWT({
